@@ -1,11 +1,15 @@
-import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar/NavBar';
+import Home from './pages/Home/Home';
+import { Box, Container } from '@mui/material';
 
-function App() {
+const App = () => {
   return (
-    <>
-      hello
-    </>
+    <Container>
+      <NavBar />
+      <Home />
+    </Container>
   );
-}
+};
 
 export default App;
