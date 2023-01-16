@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stevdy-business-solutions-task/static/css/main.073c9b0a.css",
+    "main.js": "/stevdy-business-solutions-task/static/js/main.195a6f09.js",
+    "index.html": "/stevdy-business-solutions-task/index.html",
+    "main.073c9b0a.css.map": "/stevdy-business-solutions-task/static/css/main.073c9b0a.css.map",
+    "main.195a6f09.js.map": "/stevdy-business-solutions-task/static/js/main.195a6f09.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.195a6f09.js"
+  ]
+}
