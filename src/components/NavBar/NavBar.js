@@ -16,12 +16,14 @@ const NavBar = () => {
             alignItems='center'
             wrap='nowrap'
           >
-            <Grid item sx={{ width: '170px', height: '60px' }}>
-              <Box
-                component="img"
-                src={logo}
-                sx={{ width: '100%', }}
-              />
+            <Grid container item alignContent='center' sx={{ width: '170px', height: '60px' }}>
+              <Grid item>
+                <Box
+                  component="img"
+                  src={logo}
+                  sx={{ width: '100%', m: 'auto 0' }}
+                />
+              </Grid>
             </Grid>
             <Grid item container spacing={4} direction='row' justifyContent='center' alignItems='center'>
               <Grid item>

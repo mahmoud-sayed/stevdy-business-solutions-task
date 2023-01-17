@@ -5,10 +5,10 @@ import { Box, Container } from '@mui/material';
 
 const App = () => {
   return (
-    <Container>
+    <Box sx={{ position: 'relative', maxWidth: { xl: 'lg' } }}>
       <NavBar />
       <Home />
-    </Container>
+    </Box>
   );
 };
 
