@@ -1,18 +1,37 @@
-import { AppBar, Button, Container, createTheme, Grid, MenuList, Toolbar, Typography, Box, CardMedia } from '@mui/material';
+import { AppBar, Container, createTheme, Grid, MenuList, Typography, Box, } from '@mui/material';
 import React from 'react';
 import style from './NavBar-Style';
 import logo from './../../assets/Logo/Logo.png';
+import ButtonComponent from '../Button/ButtonComponent';
+
+
+import DrawerComponent from '../Drawer/Drawer';
 
 const NavBar = () => {
 
   const theme = createTheme();
   return (
     <AppBar sx={style('appBar-style', theme)}>
-      <Container >
+      <Box sx={{ display: { xs: 'initial', md: 'none' } }}>
+        <Grid container direction='row' padding='0 2rem' bgcolor='#FF6057' alignItems='center'>
+          <Grid item flex={1}>
+            <DrawerComponent />
+          </Grid>
+          <Grid item>
+            <Box
+              component="img"
+              src={logo}
+              sx={{ height: '2.7rem' }}
+            />
+          </Grid>
+        </Grid>
+      </Box>
+      <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' }, display: { xs: 'none', md: 'initial' } }}>
         <MenuList>
           <Grid
             container
             justifyContent='center'
+            justifyItems='space-between'
             alignItems='center'
             wrap='nowrap'
           >
@@ -25,7 +44,7 @@ const NavBar = () => {
                 />
               </Grid>
             </Grid>
-            <Grid item container spacing={4} direction='row' justifyContent='center' alignItems='center'>
+            <Grid item container spacing={4} direction='row' justifyContent='center' alignItems='center' justifySelf='flex-start' sx={{ marginLeft: { md: -20 } }}>
               <Grid item>
                 <Typography
                   variant='body1'
@@ -60,10 +79,7 @@ const NavBar = () => {
               </Grid>
             </Grid>
             <Grid item>
-              <Button variant='contained' sx={{
-                width: '178px', height: '37px', borderRadius: 2,
-                background: 'linear-gradient(90deg, #e66465, #9198e5);'
-              }}>About us</Button>
+              <ButtonComponent bgColor='linear-gradient(90deg, #e66465, #9198e5)' content='About us' textColor='#fff' />
             </Grid>
           </Grid>
         </MenuList>
