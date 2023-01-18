@@ -88,7 +88,7 @@ const Home = () => {
           width: '100%',
           maxWidth: '100%',
           position: 'absolute',
-          top: -76,
+          top: { xs: 0, md: -76 },
           left: 0,
           zIndex: -1
         }}
@@ -107,6 +107,7 @@ const Home = () => {
             alignItems='center'
             flexWrap='nowrap'
             direction={{ xs: 'column', md: 'row' }}
+
           >
             <Grid container item xs={12} md={4} spacing={3} justifyContent='center' alignItems='center'>
               <Grid item xs={12}>
