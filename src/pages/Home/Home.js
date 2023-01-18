@@ -88,9 +88,11 @@ const Home = () => {
           width: '100%',
           maxWidth: '100%',
           position: 'absolute',
-          top: { xs: 0, md: -76 },
+          top: -76,
           left: 0,
-          zIndex: -1
+          zIndex: -1,
+          display: { xs: 'none', sm: 'initial' }
+
         }}
       />
       <Grid item container xs={12}>
@@ -107,21 +109,20 @@ const Home = () => {
             alignItems='center'
             flexWrap='nowrap'
             direction={{ xs: 'column', md: 'row' }}
-
           >
-            <Grid container item xs={12} md={4} spacing={3} justifyContent='center' alignItems='center'>
+            <Grid container item xs={12} md={4} spacing={3} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
               <Grid item xs={12}>
-                <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={colors.white}>Advanced Platform</Typography>
+                <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={{ xs: colors.deepOrange, sm: colors.white }}>Advanced Platform</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={colors.white}>Take your team to the next level</Typography>
+                <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={{ xs: colors.deepOrange, sm: colors.white }}>Take your team to the next level</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography fontSize='18px' lineHeight='24px' color={colors.white} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                <Typography fontSize='18px' lineHeight='24px' color={{ xs: colors.deepOrange, sm: colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <ButtonComponent bgColor='#fff' content='About us' textColor={colors.deepOrange} />
+                <ButtonComponent bgColor={{ xs: colors.deepOrange, sm: colors.white }} content='About us' textColor={{ xs: colors.white, sm: colors.deepOrange }} />
               </Grid>
             </Grid>
             <Grid item xs={12} md={8}>
