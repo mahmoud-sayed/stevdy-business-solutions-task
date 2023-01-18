@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, createTheme, Typography, Grid, Divider, Paper, Button } from '@mui/material';
+import { Box, Container, createTheme, Typography, Grid, Divider, Paper, Button, Rating } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import CountUp from 'react-countup';
 
@@ -11,6 +11,7 @@ import client3 from './../../assets/header/Clients/client-3.png';
 import client4 from './../../assets/header/Clients/client-4.png';
 import client5 from './../../assets/header/Clients/client-5.png';
 import chartImage from './../../assets/pageContentImages/Chart.png';
+import client from './../../assets/ourTeam/shutterstock_45.png';
 
 // icons
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -47,6 +48,33 @@ const Home = () => {
     },
     {
       img: chartImage
+    }
+  ];
+
+  const ourClients = [
+    {
+      id: 1,
+      img: client,
+      name: 'Florrie Jacobs',
+      title: 'CEO of Company',
+      dis: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+      rating: 5
+    },
+    {
+      id: 2,
+      img: client,
+      name: 'Florrie Jacobs',
+      title: 'CEO of Company',
+      dis: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+      rating: 4.5
+    },
+    {
+      id: 3,
+      img: client,
+      name: 'Florrie Jacobs',
+      title: 'CEO of Company',
+      dis: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
+      rating: 3
     }
   ];
   return (
@@ -160,7 +188,8 @@ const Home = () => {
                   <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
                 </Grid>
                 <Grid item>
-                  <Typography fontSize='2.3rem' color={colors.textColor} fontWeight='bold'>The best business solution for you
+                  <Typography fontSize='2.3rem' color={colors.textColor} fontWeight='bold'>
+                    The best business solution for you
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -179,9 +208,9 @@ const Home = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item container xs={12} md={6} justifyContent='center' alignItems='center'>
+          <Grid item container xs={12} md={6} justifyItems='center' alignItems='center'>
             <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-              justifyContent='center' alignItems='center'
+
             >
               <Grid item >
                 <RunCircleIcon sx={{ padding: '1rem', backgroundColor: '#F1291E', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
@@ -200,7 +229,7 @@ const Home = () => {
               </Grid>
             </Grid>
             <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-              justifyContent='center' alignItems='center'
+
             >
               <Grid item >
                 <FormatBoldIcon sx={{ padding: '1rem', backgroundColor: '#36C5AD', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
@@ -219,7 +248,7 @@ const Home = () => {
               </Grid>
             </Grid>
             <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-              justifyContent='center' alignItems='center'
+
             >
               <Grid item >
                 <HighQualityIcon sx={{ padding: '1rem', backgroundColor: '#CB4BF8', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
@@ -238,7 +267,7 @@ const Home = () => {
               </Grid>
             </Grid>
             <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-              justifyContent='center' alignItems='center'
+
             >
               <Grid item >
                 <HomeRepairServiceIcon sx={{ padding: '1rem', backgroundColor: '#56E65B', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
@@ -324,13 +353,13 @@ const Home = () => {
             <Carousel sx={{ width: '100%' }}>
               {
                 chartItems.map((item, i) =>
-                (<Paper p={0} key={i}>
+                (<Box p={0} key={i}>
                   <Box
                     component='img'
                     src={item.img}
                     sx={{ width: '100%', height: '100%' }}
                   />
-                </Paper>)
+                </Box>)
                 )
               }
             </Carousel>
@@ -459,15 +488,33 @@ const Home = () => {
           gap={2}
         >
           <Grid container item xs={12} md={5} justifyContent='center' alignItems='center'>
-            <Carousel sx={{ width: '100%', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }}>
+            <Carousel sx={{ width: '100%' }}>
               {
-                chartItems.map((item, i) =>
-                (<Paper p={0} key={i}>
-                  <Box
-                    component='img'
-                    src={item.img}
-                    sx={{ width: '100%', height: '100%' }}
-                  />
+                ourClients.map((item) =>
+                (<Paper key={item.id} sx={{ boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} p={0}>
+                  <Grid container p={1} direction='row' justifyContent='center' alignItems='center'>
+                    <Grid item xs={5} gap={2}>
+                      <Box component='img' src={item.img} />
+                    </Grid>
+                    <Grid xs={5} gap={1.5} item container direction='column'>
+                      <Grid item>
+                        <Typography fontSize='24px' color={colors.textColor}>
+                          {item.name}
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography fontSize='14px' color={colors.textColor2}>
+                          {item.dis}
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Rating
+                          color='#CB48F9'
+                          value={item.rating}
+                        />
+                      </Grid>
+                    </Grid>
+                  </Grid>
                 </Paper>))
               }
             </Carousel>
