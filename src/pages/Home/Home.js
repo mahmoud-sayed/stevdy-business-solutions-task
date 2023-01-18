@@ -494,7 +494,7 @@ const Home = () => {
               {
                 ourClients.map((item) =>
                 (<Paper key={item.id} sx={{ boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} p={0}>
-                  <Grid container p={1} direction='row' justifyContent='center' alignItems='center'>
+                  <Grid container p={1} direction={{ xs: 'column', md: 'row' }} justifyContent='center' alignItems='center'>
                     <Grid item xs={5} gap={2}>
                       <Box component='img' src={item.img} />
                     </Grid>
