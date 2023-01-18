@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/stevdy-business-solutions-task/static/css/main.073c9b0a.css",
-    "main.js": "/stevdy-business-solutions-task/static/js/main.195a6f09.js",
+    "main.css": "/stevdy-business-solutions-task/static/css/main.4eae0d3c.css",
+    "main.js": "/stevdy-business-solutions-task/static/js/main.0279cb41.js",
+    "static/media/header-backGround.png": "/stevdy-business-solutions-task/static/media/header-backGround.203e073a052fdd24ee9a.png",
+    "static/media/Chart.png": "/stevdy-business-solutions-task/static/media/Chart.6e3fc0e799ee9e79ce30.png",
+    "static/media/Logo.png": "/stevdy-business-solutions-task/static/media/Logo.1044060ad1a7b904015b.png",
     "index.html": "/stevdy-business-solutions-task/index.html",
-    "main.073c9b0a.css.map": "/stevdy-business-solutions-task/static/css/main.073c9b0a.css.map",
-    "main.195a6f09.js.map": "/stevdy-business-solutions-task/static/js/main.195a6f09.js.map"
+    "main.4eae0d3c.css.map": "/stevdy-business-solutions-task/static/css/main.4eae0d3c.css.map",
+    "main.0279cb41.js.map": "/stevdy-business-solutions-task/static/js/main.0279cb41.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.195a6f09.js"
+    "static/css/main.4eae0d3c.css",
+    "static/js/main.0279cb41.js"
   ]
 }
