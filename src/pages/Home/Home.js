@@ -49,84 +49,86 @@ const Home = () => {
         <NavBar />
       </Grid>
       {/* header content section */}
-      <Grid container justifyItems='center' alignItems='center'>
-        <Grid
-          xs={12}
-          item
-          container
-          justifyContent='center'
-          alignItems='center'
-          flexWrap='nowrap'
-        >
-          <Grid container item xs={12} md={4} spacing={3} justifyContent='center'>
-            <Grid item xs={12}>
-              <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={colors.white}>Advanced Platform</Typography>
+      <Container>
+        <Grid container justifyItems='center' alignItems='center'>
+          <Grid
+            xs={12}
+            item
+            container
+            justifyContent='center'
+            alignItems='center'
+            flexWrap='nowrap'
+          >
+            <Grid container item xs={12} md={4} spacing={3} justifyContent='center'>
+              <Grid item xs={12}>
+                <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={colors.white}>Advanced Platform</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={colors.white}>Take your team to the next level</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography fontSize='18px' lineHeight='24px' color={colors.white} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <ButtonComponent bgColor='#fff' content='About us' textColor={colors.deepOrange} />
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={colors.white}>Take your team to the next level</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography fontSize='18px' lineHeight='24px' color={colors.white} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <ButtonComponent bgColor='#fff' content='About us' textColor={colors.deepOrange} />
+            <Grid item xs={12} md={8}>
+              <Box
+                component='img'
+                src={chartImage}
+                height='100%'
+                sx={{ width: '100%', height: '100%' }}
+              />
             </Grid>
           </Grid>
-          <Grid item xs={12} md={8}>
-            <Box
-              component='img'
-              src={chartImage}
-              height='100%'
-              sx={{ width: '100%', height: '100%' }}
-            />
-          </Grid>
-        </Grid>
-        <Grid item container xs={12}>
-          <Grid item width='211px' height='68px'>
-            <Box
-              component='img'
-              src={client1}
-              width='100%'
-              height='100%'
-            />
-          </Grid>
-          <Grid item width='211px' height='68px'>
-            <Box
-              component='img'
-              src={client2}
-              width='100%'
-              height='100%'
-            />
-          </Grid>
-          <Grid item width='211px' height='68px'>
-            <Box
-              component='img'
-              src={client3}
-              width='100%'
-              height='100%'
-            />
-          </Grid>
-          <Grid item width='211px' height='68px'>
-            <Box
-              component='img'
-              src={client4}
-              width='100%'
-              height='100%'
-            />
-          </Grid>
-          <Grid item width='211px' height='68px'>
-            <Box
-              component='img'
-              src={client5}
-              width='100%'
-              height='100%'
-            />
+          <Grid item container xs={12}>
+            <Grid item width='211px' height='68px'>
+              <Box
+                component='img'
+                src={client1}
+                width='100%'
+                height='100%'
+              />
+            </Grid>
+            <Grid item width='211px' height='68px'>
+              <Box
+                component='img'
+                src={client2}
+                width='100%'
+                height='100%'
+              />
+            </Grid>
+            <Grid item width='211px' height='68px'>
+              <Box
+                component='img'
+                src={client3}
+                width='100%'
+                height='100%'
+              />
+            </Grid>
+            <Grid item width='211px' height='68px'>
+              <Box
+                component='img'
+                src={client4}
+                width='100%'
+                height='100%'
+              />
+            </Grid>
+            <Grid item width='211px' height='68px'>
+              <Box
+                component='img'
+                src={client5}
+                width='100%'
+                height='100%'
+              />
+            </Grid>
+
           </Grid>
 
         </Grid>
-
-      </Grid>
+      </Container>
       {/* business solution section */}
       <Box sx={{ position: 'relative' }}>
         <Box
