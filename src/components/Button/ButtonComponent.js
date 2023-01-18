@@ -10,8 +10,19 @@ const ButtonComponent = ({ bgColor, content, textColor }) => {
         height: '37px',
         borderRadius: 2,
         background: bgColor,
-        color: textColor
+        color: textColor,
+
+        '&:hover': {
+          backgroundColor: '#FF6057',
+          boxShadow: 'none',
+          color: '#fff'
+        },
+        '&:active': {
+          boxShadow: 'none',
+          backgroundColor: '#FF6057',
+        },
       }}
+
     >
       {content}
     </Button>

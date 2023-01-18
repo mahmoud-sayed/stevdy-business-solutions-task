@@ -6,7 +6,7 @@
 
 
 ## Links:
- - [GitHub](https://github.com/mahmoud-sayed/stevdy-business-solutions-task)
+ - [Project Code On GitHub](https://github.com/mahmoud-sayed/stevdy-business-solutions-task)
  - [Open Project Online](https://mahmoud-sayed.github.io/stevdy-business-solutions-task)
 
 

@@ -23,8 +23,8 @@ const DrawerComponent = () => {
       >
         <List>
           {['Browser', 'Bootcamps', 'How It Works', 'Testemonia'].map((text) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
+            <ListItem key={text} disablePadding >
+              <ListItemButton sx={{ width: '15rem' }}>
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>

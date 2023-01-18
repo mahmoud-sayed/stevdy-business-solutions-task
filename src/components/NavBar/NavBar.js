@@ -45,38 +45,19 @@ const NavBar = () => {
               </Grid>
             </Grid>
             <Grid item container spacing={4} direction='row' justifyContent='center' alignItems='center' justifySelf='flex-start' sx={{ marginLeft: { md: -20 } }}>
-              <Grid item>
-                <Typography
-                  variant='body1'
-                  color='#fff'
-                  fontSize='14px'
-                  lineHeight='14px'
-                >Browser</Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant='body1'
-                  color='#fff'
-                  fontSize='14px'
-                  lineHeight='14px'
-                >Bootcamps</Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant='body1'
-                  color='#fff'
-                  fontSize='14px'
-                  lineHeight='14px'
-                >How It Works</Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  variant='body1'
-                  color='#fff'
-                  fontSize='14px'
-                  lineHeight='14px'
-                >Testemonia</Typography>
-              </Grid>
+              {['Browser', 'Bootcamps', 'How It Works', 'Testemonia'].map((text => (
+
+                <Grid item key={text}>
+                  <Typography
+                    variant='body1'
+                    color='#fff'
+                    fontSize='14px'
+                    lineHeight='14px'
+                    sx={{ cursor: 'pointer' }}
+                  >{text}</Typography>
+                </Grid>
+
+              )))}
             </Grid>
             <Grid item>
               <ButtonComponent bgColor='linear-gradient(90deg, #e66465, #9198e5)' content='About us' textColor='#fff' />
