@@ -51,6 +51,25 @@ const Home = () => {
     }
   ];
 
+  const clientsImg = [
+    {
+      id: 1,
+      img: client1
+    }, {
+      id: 2,
+      img: client2
+    }, {
+      id: 3,
+      img: client3
+    }, {
+      id: 4,
+      img: client4
+    }, {
+      id: 5,
+      img: client5
+    }
+  ];
+
   const ourClients = [
     {
       id: 1,
@@ -135,47 +154,17 @@ const Home = () => {
             </Grid>
           </Grid>
           <Grid item container xs={12}>
-            <Grid item width='211px' height='68px'>
-              <Box
-                component='img'
-                src={client1}
-                width='100%'
-                height='100%'
-              />
-            </Grid>
-            <Grid item width='211px' height='68px'>
-              <Box
-                component='img'
-                src={client2}
-                width='100%'
-                height='100%'
-              />
-            </Grid>
-            <Grid item width='211px' height='68px'>
-              <Box
-                component='img'
-                src={client3}
-                width='100%'
-                height='100%'
-              />
-            </Grid>
-            <Grid item width='211px' height='68px'>
-              <Box
-                component='img'
-                src={client4}
-                width='100%'
-                height='100%'
-              />
-            </Grid>
-            <Grid item width='211px' height='68px'>
-              <Box
-                component='img'
-                src={client5}
-                width='100%'
-                height='100%'
-              />
-            </Grid>
+            {clientsImg.map(item => (
 
+              <Grid item width='211px' height='68px' key={item.id}>
+                <Box
+                  component='img'
+                  src={item.img}
+                  width='100%'
+                  height='100%'
+                />
+              </Grid>
+            ))}
           </Grid>
 
         </Grid>

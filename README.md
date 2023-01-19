@@ -29,3 +29,7 @@ freelancers-gate is a freelancing platform same like freelancer website
 Shoes-Shop is a mobile app built with react native I just learn it in the last 2 weeks
 - [Shoes-Shop](https://github.com/mahmoud-sayed/Shoes-Shop)
 
+
+## steps I'm making it now after delivering the task
+ - refactor the code to make it look better and shorter 
+ - create reusable components for better code strucher
