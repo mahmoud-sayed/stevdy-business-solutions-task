@@ -4,7 +4,7 @@ import React from 'react';
 const ServiceComponent = ({ children, heading }) => {
   const theme = useTheme();
   return (
-    <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}>
+    <Grid item container gap={2} xs={12} sm={5} md={6} direction='column' pb={3}>
       <Grid item >
         {children}
       </Grid>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Divider } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
-import CountUp from 'react-countup';
+
 
 // images
 import backGroundHeaderImage from './../../assets/header/header-backGround.png';
@@ -32,6 +32,7 @@ import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 import BusinessHintSection from '../../components/BusinessHintSection/BusinessHintSection';
 import ImgWithTextSection from './../../components/ImgWithTextSection/ImgWithTextSection';
 import ServiceComponent from '../../components/ServiceComponent/ServiceComponent';
+import Counter from '../../components/Counter/Counter';
 
 // data to use
 
@@ -147,7 +148,7 @@ const Home = () => {
             description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
             showArrow={true}
           />
-          <Grid item container xs={12} md={6} justifyItems='center' alignItems='center'>
+          <Grid item container xs={12} md={6} justifyContent='center' gap={1} alignItems='center'>
             <ServiceComponent heading='Scale Your Activity'>
               <RunCircleIcon sx={{ padding: { xs: '.5rem', md: '1rem' }, backgroundColor: '#F1291E', borderRadius: '50%', color: '#fff', fontSize: { xs: '1.5rem', md: '2rem', lg: '2.5rem' }, boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
             </ServiceComponent>
@@ -245,14 +246,14 @@ const Home = () => {
 
           </Grid>
           <Grid container item gap={1} xs={12} md={5} justifyContent='flex-start' alignItems='center' direction='row'>
-            <Grid item container xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={8}>
+            <Grid item container mr={{ sm: -7, md: 'initial' }} xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={{ xs: 8, sm: 6, md: 6, lg: 8 }} width='30px'>
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <Typography sx={{ color: '#fff', fontSize: { xs: '1rem', lg: '1.5rem' }, fontWeight: 'bold' }}> 1</Typography>
                 </Box>
               </Grid>
               <Grid>
-                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', sm: '70px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
               </Grid>
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -260,7 +261,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid>
-                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', sm: '70px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
               </Grid>
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -272,36 +273,36 @@ const Home = () => {
             <Grid item container xs={8} gap={6}>
               <Grid item container direction='column' alignItems='flex-start' justifyContent='center' gap={2} xs={12}>
                 <Grid item >
-                  <Typography fontSize={{ xs: '1rem', lg: '1.5rem' }} color={theme.colors.textColor}>
+                  <Typography fontSize={{ xs: '1rem', sm: '1.5rem' }} color={theme.colors.textColor}>
                     Market Research
                   </Typography>
                 </Grid>
                 <Grid item >
-                  <Typography fontSize={{ xs: '.6rem', lg: '.8rem' }} color={theme.colors.textColor2}>
+                  <Typography fontSize={{ xs: '.6rem', sm: '.8rem' }} color={theme.colors.textColor2}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                   </Typography>
                 </Grid>
               </Grid>
               <Grid item container direction='column' alignItems='flex-start' justifyContent='center' gap={2} xs={12}>
                 <Grid item >
-                  <Typography fontSize={{ xs: '1rem', lg: '1.5rem' }} color={theme.colors.textColor}>
+                  <Typography fontSize={{ xs: '1rem', sm: '1.5rem' }} color={theme.colors.textColor}>
                     Market Research
                   </Typography>
                 </Grid>
                 <Grid item >
-                  <Typography fontSize={{ xs: '.6rem', lg: '.8rem' }} color={theme.colors.textColor2}>
+                  <Typography fontSize={{ xs: '.6rem', sm: '.8rem' }} color={theme.colors.textColor2}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                   </Typography>
                 </Grid>
               </Grid>
               <Grid item container direction='column' alignItems='flex-start' justifyContent='center' gap={2} xs={12}>
                 <Grid item >
-                  <Typography fontSize={{ xs: '1rem', lg: '1.5rem' }} color={theme.colors.textColor}>
+                  <Typography fontSize={{ xs: '1rem', sm: '1.5rem' }} color={theme.colors.textColor}>
                     Market Research
                   </Typography>
                 </Grid>
                 <Grid item >
-                  <Typography fontSize={{ xs: '.6rem', lg: '.8rem' }} color={theme.colors.textColor2}>
+                  <Typography fontSize={{ xs: '.6rem', sm: '.8rem' }} color={theme.colors.textColor2}>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
                   </Typography>
                 </Grid>
@@ -325,16 +326,9 @@ const Home = () => {
 
       {/* Counters Section */}
       <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
-        <Grid container justifyContent='center' alignItems='center' mt={10} mb={5}>
+        <Grid container xs={12} justifyContent='center' alignItems='center' mt={10} mb={5}>
           {['Download', 'Active User', 'Positive Feedback', '+ rating'].map(item => (
-            <Grid item container justifyContent='center' sx={8} md={4} lg={3} alignItems='center' direction='column' gap={1}>
-              <Grid item >
-                <CountUp end={570} enableScrollSpy='true' style={{ fontSize: '2.8rem', fontWeight: 'bold', color: '#FF6057' }} />
-              </Grid>
-              <Grid item >
-                <Typography fontSize='1.5rem' color={theme.colors.textColor2}>{item}</Typography>
-              </Grid>
-            </Grid>
+            <Counter item={item} />
           ))}
         </Grid>
       </Container>;
@@ -345,7 +339,7 @@ const Home = () => {
           direction={{ xs: 'column', md: 'row' }}
           gap={2}
         >
-          <Grid container item xs={12} md={5} justifyContent='center' alignItems='center'>
+          <Grid container item xs={12} md={5} mb={{ xs: 5, md: 'initial' }} justifyContent='center' alignItems='center'>
             <Carousel sx={{ width: '100%' }}>
               {testimonials.map((item) => (<TestimonialCard item={item} />))}
             </Carousel>
