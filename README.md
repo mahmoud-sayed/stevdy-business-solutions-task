@@ -83,4 +83,12 @@ Shoes-Shop is a mobile app built with react native I just learn it in the last 2
 
 &nbsp;
 
- - 
+ - in XL screen all sections changed to become wider
+
+&nbsp;
+
+ - change the all fonts sizes to fit all screens
+
+&nbsp;
+
+- 

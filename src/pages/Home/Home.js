@@ -20,7 +20,6 @@ import HighQualityIcon from '@mui/icons-material/HighQuality';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 
 // components imports
-import Section from './../../components/Section/Section';
 import ButtonComponent from '../../components/Button/ButtonComponent';
 import SideToSideSection from '../../components/SideToSideSection/SideToSideSection';
 import Footer from '../../components/Footer/Footer';
@@ -90,33 +89,43 @@ const Home = () => {
 
         }}
       />
+
+      {/* NavBar */}
       <Grid item container xs={12}>
         <NavBar />
       </Grid>
+
       {/* header content section */}
-      <Container>
-        <Grid container justifyItems='center' alignItems='center'>
+      <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
+        <Grid container justifyItems='center' alignItems='center' >
           <ImgWithTextSection>
-            <Grid container item xs={12} md={4} spacing={3} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
+            <Grid container item xs={12} md={4} spacing={{ xs: 1.5, md: 3 }} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
               <Grid item xs={12}>
-                <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>Advanced Platform</Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>Take your team to the next level</Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography fontSize='18px' lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                <Typography
+                  justifySelf='center'
+                  fontSize={{ xs: '16px', md: '18', lg: '20', xl: '24px' }}
+                  lineHeight='24px'
+                  color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>
+                  Advanced Platform
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <ButtonComponent bgColor={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} content='About us' textColor={{ xs: theme.colors.white, sm: theme.colors.deepOrange }} />
+                <Typography
+                  fontSize={{ xs: '30px', lg: '40', xl: '58px' }}
+                  lineHeight={{ xs: '40px', xl: '68px' }} fontWeight='bold' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>Take your team to the next level</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography fontSize={{ xs: '14px', lg: '18' }} lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <ButtonComponent bgColor={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} content='About us' textColor={{ xs: theme.colors.white, sm: theme.colors.deepOrange }} width={{ xs: '120px', md: '178px' }} />
               </Grid>
             </Grid>
           </ImgWithTextSection>
-          <Grid item container xs={12}>
+          <Grid item container xs={12} justifyItems='center' alignItems='center'>
             {clientsImg.map(item => (
-
-              <Grid item width='211px' height='68px' key={item.id}>
+              <Grid item width='211px' height='68px' key={item.id} margin='0 auto'>
                 <Box
                   component='img'
                   src={item.img}
@@ -128,9 +137,10 @@ const Home = () => {
           </Grid>
 
         </Grid>
-      </Container>
+      </Container >
+
       {/* business solution section */}
-      <Container>
+      < Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container xs={12} justifyContent='center' alignContent='center' mt={10} mb={10}>
           <BusinessHintSection
             heading='The best business solution for you'
@@ -152,9 +162,10 @@ const Home = () => {
             </ServiceComponent>
           </Grid>
         </Grid>
-      </Container>
+      </ Container>
+
       {/* Best Platform */}
-      <SideToSideSection>
+      < SideToSideSection >
         <ImgWithTextSection componentsDirectionInMD='row-reverse'>
           <BusinessHintSection
             heading='Best Platform for the Technological Era'
@@ -162,9 +173,10 @@ const Home = () => {
             showArrow={true}
           />
         </ImgWithTextSection>
-      </SideToSideSection>
+      </ SideToSideSection>
+
       {/* platform overview */}
-      <Container>
+      < Container >
         <Grid container direction='column' justifyContent='center' alignItems='center' mt={10} mb={10}>
           <Grid container direction='column' justifyContent='center' alignItems='center' >
             <Grid item xs={12} sm={8} md={3.5} >
@@ -195,11 +207,11 @@ const Home = () => {
             </Carousel>
           </Grid>
         </Grid>
-      </Container >
+      </ Container>
 
 
       {/* Best Platform 2*/}
-      <SideToSideSection>
+      <SideToSideSection SideToSideSection >
         <ImgWithTextSection >
           <BusinessHintSection
             heading='Best Platform for the Technological Era'
@@ -207,10 +219,10 @@ const Home = () => {
             showArrow={false}
           />
         </ImgWithTextSection>
-      </SideToSideSection>
+      </SideToSideSection >
 
       {/* Acceleration section */}
-      <Container>
+      < Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyContent='center' alignItems='center' mb={5}
           direction={{ xs: 'column', md: 'row' }}
           gap={2}
@@ -292,10 +304,10 @@ const Home = () => {
 
           </Grid>
         </Grid>
-      </Container>
+      </ Container>
 
       {/* caption section */}
-      <Container>
+      <Container Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyContent='center' alignItems='center' mt={10} mb={10}>
           <Grid item xs={12} sm={8} md={3.5} >
             <Typography fontSize='2.3rem' fontWeight='bold' color={theme.colors.textColor}>
@@ -306,7 +318,7 @@ const Home = () => {
       </Container>;
 
       {/* Counters Section */}
-      <Container>
+      <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyContent='center' alignItems='center' mt={10} mb={5}>
           {['Download', 'Active User', 'Positive Feedback', '+ rating'].map(item => (
             <Grid item container justifyContent='center' sx={8} md={4} lg={3} alignItems='center' direction='column' gap={1}>
@@ -322,7 +334,7 @@ const Home = () => {
       </Container>;
 
       {/* testimonials section */}
-      <Container>
+      <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyContent='center' alignItems='center' mb={5}
           direction={{ xs: 'column', md: 'row' }}
           gap={2}
@@ -356,7 +368,6 @@ const Home = () => {
       <Box sx={{ backgroundColor: '#333333' }}>
         <Footer />
       </Box>
-      <Box sx={{ backgroundColor: '#333333', height: '100px' }}></Box>
     </Box >
   );
 };
