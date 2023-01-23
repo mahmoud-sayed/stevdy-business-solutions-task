@@ -15,7 +15,7 @@ const ServiceComponent = ({ children, heading }) => {
         <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
       </Grid>
       <Grid item>
-        <Typography variant='body1' color={theme.colors.textColor2}>
+        <Typography variant='body1' fontSize='14px' color={theme.colors.textColor2}>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
 
         </Typography>
