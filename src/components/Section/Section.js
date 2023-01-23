@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 
 const Section = ({ children, props }) => {
   return (
-    <Box component='container' {...props} sx={{ position: 'relative', overflow: 'hidden' }}>
+    <Box component='container' {...props} sx={{ position: 'relative' }}>
       {children}
     </Box>
   );

@@ -73,7 +73,7 @@ const Home = () => {
 
 
   return (
-    <Section >
+    <Box >
       <Box
         component='img'
         src={backGroundHeaderImage}
@@ -153,7 +153,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Container>
-      {/* Best Platform 1*/}
+      {/* Best Platform */}
       <SideToSideSection>
         <ImgWithTextSection componentsDirectionInMD='row-reverse'>
           <BusinessHintSection
@@ -162,22 +162,20 @@ const Home = () => {
             showArrow={true}
           />
         </ImgWithTextSection>
-
       </SideToSideSection>
       {/* platform overview */}
       <Container>
         <Grid container direction='column' justifyContent='center' alignItems='center' mt={10} mb={10}>
-          <Grid container item xs={12} sm={6} spacing={2} justifyContent='center' alignItems='center'>
-            <Grid item xs={12} justifyContent='center' alignItems='center'>
-              <Typography justifySelf='center' fontSize='1.75rem' lineHeight='24px' color='#8F8F8F'>Advanced Customer Service Platform</Typography>
+          <Grid container direction='column' justifyContent='center' alignItems='center' >
+            <Grid item xs={12} sm={8} md={3.5} >
+              <Typography fontSize='1.75rem' lineHeight='24px' color='#8F8F8F'>Advanced Customer Service Platform</Typography>
             </Grid>
-            <Grid item xs={12} justifyContent='center' alignItems='center'>
+            <Grid item xs={12} sm={8} md={3.5} >
               <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={theme.colors.textColor}>Platform Overview</Typography>
             </Grid>
-            <Grid item xs={12} justifyContent='center' alignItems='center'>
+            <Grid item xs={12} sm={8} md={3.5} sx={{ width: '700px' }}>
               <Typography fontSize='18px' lineHeight='24px' color={theme.colors.textColor2} >
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
-
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
               </Typography>
             </Grid>
           </Grid>
@@ -234,18 +232,64 @@ const Home = () => {
             </Grid>
 
           </Grid>
-          <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>
-            <Grid item container>
-              <Typography fontSize='2rem' fontWeight='bold' color={theme.colors.textColor}>
-                Grow Your Business and Join Our Happy Users
-              </Typography>
-            </Grid>
-            <Grid item container>
-              <Typography color={theme.colors.textColor2}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
+          <Grid container item gap={1} xs={12} md={5} justifyContent='flex-start' alignItems='center' direction='row'>
+            <Grid item container xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={8}>
+              <Grid item>
+                <Box sx={{ padding: '1rem', backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <Typography sx={{ color: '#fff', fontSize: '1.5rem', fontWeight: 'bold' }}> 1</Typography>
+                </Box>
+              </Grid>
+              <Grid>
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: '80px', width: '2px', backgroundColor: '#BCBCBC' }} />
+              </Grid>
+              <Grid item>
+                <Box sx={{ padding: '1rem', backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <Typography sx={{ color: '#fff', fontSize: '1.5rem', fontWeight: 'bold' }}> 1</Typography>
+                </Box>
+              </Grid>
+              <Grid>
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: '80px', width: '2px', backgroundColor: '#BCBCBC' }} />
+              </Grid>
+              <Grid item>
+                <Box sx={{ padding: '1rem', backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <Typography sx={{ color: '#fff', fontSize: '1.5rem', fontWeight: 'bold' }}> 1</Typography>
+                </Box>
+              </Grid>
 
-              </Typography>
             </Grid>
+            <Grid item container xs={8} gap={6}>
+              <Grid item container direction='column' alignItems='flex-start' justifyContent='center' gap={2} xs={12}>
+                <Grid item >
+                  <Typography fontSize='1.5rem' color={theme.colors.textColor}>
+                    Market Research
+                  </Typography>
+                </Grid>
+                <Grid item >
+                  <Typography fontSize='0.8rem' color={theme.colors.textColor2}>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid item container direction='column' alignItems='flex-start' justifyContent='center' gap={2}>
+                <Grid item>
+                  <Typography fontSize='1.5rem' color={theme.colors.textColor}>Market Research</Typography>
+                </Grid>
+                <Grid item>
+                  <Typography fontSize='0.8rem' color={theme.colors.textColor2}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid item container direction='column' alignItems='flex-start' justifyContent='center' gap={2}>
+                <Grid item>
+                  <Typography fontSize='1.5rem' color={theme.colors.textColor}>Market Research</Typography>
+                </Grid>
+                <Grid item>
+                  <Typography fontSize='0.8rem' color={theme.colors.textColor2}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
           </Grid>
         </Grid>
       </Container>
@@ -310,11 +354,10 @@ const Home = () => {
 
       {/* Footer Section */}
       <Box sx={{ backgroundColor: '#333333' }}>
-        <Section>
-          <Footer />
-        </Section>
+        <Footer />
       </Box>
-    </Section >
+      <Box sx={{ backgroundColor: '#333333', height: '100px' }}></Box>
+    </Box >
   );
 };
 

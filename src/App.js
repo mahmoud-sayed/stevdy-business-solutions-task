@@ -6,7 +6,7 @@ import theme from './MUITheme/MUITheme';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ position: 'relative', maxWidth: { xl: 'lg' }, margin: '0 auto' }}>
+      <Box sx={{ position: 'relative', margin: '0 auto' }}>
         <Home />
       </Box>
     </ThemeProvider>

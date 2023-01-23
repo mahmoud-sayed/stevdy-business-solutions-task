@@ -2,6 +2,7 @@ import { Paper, Grid, Box, Typography, Rating } from '@mui/material';
 import React from 'react';
 import { useTheme } from '@emotion/react';
 
+
 const TestimonialCard = ({ item }) => {
   const theme = useTheme();
   return (
@@ -23,8 +24,13 @@ const TestimonialCard = ({ item }) => {
           </Grid>
           <Grid item>
             <Rating
-              color='#CB48F9'
+              sx={{
+                '& .MuiRating-iconFilled': {
+                  color: theme.colors.startColor
+                }
+              }}
               value={item.rating}
+              readOnly
             />
           </Grid>
         </Grid>

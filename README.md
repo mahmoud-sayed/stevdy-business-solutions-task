@@ -64,4 +64,23 @@ Shoes-Shop is a mobile app built with react native I just learn it in the last 2
 
  &nbsp;
 
+ - centered this section 
+  ![Platform overview](./ReadMEImages/Platform.png)
+
+ &nbsp;
+
+ - Changed starts color in testimonials card
+  ![Platform overview](./ReadMEImages/starColor.png)
+
+&nbsp;
+
+ - done creating market research section
+  ![Platform overview](./ReadMEImages/marketResearch.png)
+
+&nbsp;
+
+ - fixed the footer scalability
+
+&nbsp;
+
  - 
