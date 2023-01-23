@@ -32,6 +32,7 @@ import testimonials from './../../data/testimonials';
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 import BusinessHintSection from '../../components/BusinessHintSection/BusinessHintSection';
 import ImgWithTextSection from './../../components/ImgWithTextSection/ImgWithTextSection';
+import ServiceComponent from '../../components/ServiceComponent/ServiceComponent';
 
 // data to use
 
@@ -137,82 +138,18 @@ const Home = () => {
             showArrow={true}
           />
           <Grid item container xs={12} md={6} justifyItems='center' alignItems='center'>
-            <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-
-            >
-              <Grid item >
-                <RunCircleIcon sx={{ padding: '1rem', backgroundColor: '#F1291E', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor}>Scale Your Activity</Typography>
-              </Grid>
-              <Grid>
-                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor2}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-
-            >
-              <Grid item >
-                <FormatBoldIcon sx={{ padding: '1rem', backgroundColor: '#36C5AD', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor}>BootCamp</Typography>
-              </Grid>
-              <Grid>
-                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor2}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-
-            >
-              <Grid item >
-                <HighQualityIcon sx={{ padding: '1rem', backgroundColor: '#CB4BF8', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor}>Hight Quality</Typography>
-              </Grid>
-              <Grid>
-                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor2}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-
-                </Typography>
-              </Grid>
-            </Grid>
-            <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
-
-            >
-              <Grid item >
-                <HomeRepairServiceIcon sx={{ padding: '1rem', backgroundColor: '#56E65B', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor}>Scale Your Activity</Typography>
-              </Grid>
-              <Grid>
-                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
-              </Grid>
-              <Grid item>
-                <Typography variant='body1' color={theme.colors.textColor2}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-
-                </Typography>
-              </Grid>
-            </Grid>
+            <ServiceComponent heading='Scale Your Activity'>
+              <RunCircleIcon sx={{ padding: '1rem', backgroundColor: '#F1291E', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
+            </ServiceComponent>
+            <ServiceComponent heading='Bootcamps'>
+              <FormatBoldIcon sx={{ padding: '1rem', backgroundColor: '#36C5AD', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
+            </ServiceComponent>
+            <ServiceComponent heading='Hight Quality'>
+              <HighQualityIcon sx={{ padding: '1rem', backgroundColor: '#CB4BF8', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
+            </ServiceComponent>
+            <ServiceComponent heading='Get Certifcation'>
+              <HomeRepairServiceIcon sx={{ padding: '1rem', backgroundColor: '#56E65B', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
+            </ServiceComponent>
           </Grid>
         </Grid>
       </Container>

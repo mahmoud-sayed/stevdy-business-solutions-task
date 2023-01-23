@@ -59,4 +59,9 @@ Shoes-Shop is a mobile app built with react native I just learn it in the last 2
 
  &nbsp;
 
+ - Created component for services
+ ![service section](./ReadMEImages/service.png)
+
+ &nbsp;
+
  - 
