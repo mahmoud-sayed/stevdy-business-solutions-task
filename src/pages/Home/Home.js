@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, createTheme, Typography, Grid, Divider, Paper, Button, Rating } from '@mui/material';
+import { Box, Container, Typography, Grid, Divider } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import CountUp from 'react-countup';
 
@@ -11,10 +11,9 @@ import client3 from './../../assets/header/Clients/client-3.png';
 import client4 from './../../assets/header/Clients/client-4.png';
 import client5 from './../../assets/header/Clients/client-5.png';
 import chartImage from './../../assets/pageContentImages/Chart.png';
-import client from './../../assets/ourTeam/shutterstock_45.png';
+
 
 // icons
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import RunCircleIcon from '@mui/icons-material/RunCircle';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import HighQualityIcon from '@mui/icons-material/HighQuality';
@@ -24,20 +23,21 @@ import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 import Section from './../../components/Section/Section';
 import ButtonComponent from '../../components/Button/ButtonComponent';
 import SideToSideSection from '../../components/SideToSideSection/SideToSideSection';
-
-//page style
 import Footer from '../../components/Footer/Footer';
 import NavBar from './../../components/NavBar/NavBar';
 
+//page style
+import { useTheme } from '@emotion/react';
+import testimonials from './../../data/testimonials';
+import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
+import BusinessHintSection from '../../components/BusinessHintSection/BusinessHintSection';
+import ImgWithTextSection from './../../components/ImgWithTextSection/ImgWithTextSection';
+
+// data to use
+
 
 const Home = () => {
-
-  const colors = {
-    white: '#fff',
-    deepOrange: '#FF6057',
-    textColor: '#3B3A3A',
-    textColor2: '#8F8F8F'
-  };
+  const theme = useTheme();
 
   const chartItems = [
     {
@@ -70,32 +70,7 @@ const Home = () => {
     }
   ];
 
-  const ourClients = [
-    {
-      id: 1,
-      img: client,
-      name: 'Florrie Jacobs',
-      title: 'CEO of Company',
-      dis: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
-      rating: 5
-    },
-    {
-      id: 2,
-      img: client,
-      name: 'Florrie Jacobs',
-      title: 'CEO of Company',
-      dis: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
-      rating: 4.5
-    },
-    {
-      id: 3,
-      img: client,
-      name: 'Florrie Jacobs',
-      title: 'CEO of Company',
-      dis: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat',
-      rating: 3
-    }
-  ];
+
   return (
     <Section >
       <Box
@@ -120,39 +95,23 @@ const Home = () => {
       {/* header content section */}
       <Container>
         <Grid container justifyItems='center' alignItems='center'>
-          <Grid
-            xs={12}
-            item
-            container
-            justifyContent='center'
-            alignItems='center'
-            flexWrap='nowrap'
-            direction={{ xs: 'column', md: 'row' }}
-          >
+          <ImgWithTextSection>
             <Grid container item xs={12} md={4} spacing={3} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
               <Grid item xs={12}>
-                <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={{ xs: colors.deepOrange, sm: colors.white }}>Advanced Platform</Typography>
+                <Typography justifySelf='center' fontSize='24px' lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>Advanced Platform</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={{ xs: colors.deepOrange, sm: colors.white }}>Take your team to the next level</Typography>
+                <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>Take your team to the next level</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography fontSize='18px' lineHeight='24px' color={{ xs: colors.deepOrange, sm: colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                <Typography fontSize='18px' lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <ButtonComponent bgColor={{ xs: colors.deepOrange, sm: colors.white }} content='About us' textColor={{ xs: colors.white, sm: colors.deepOrange }} />
+                <ButtonComponent bgColor={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} content='About us' textColor={{ xs: theme.colors.white, sm: theme.colors.deepOrange }} />
               </Grid>
             </Grid>
-            <Grid item xs={12} md={8}>
-              <Box
-                component='img'
-                src={chartImage}
-                height='100%'
-                sx={{ width: '100%', height: '100%' }}
-              />
-            </Grid>
-          </Grid>
+          </ImgWithTextSection>
           <Grid item container xs={12}>
             {clientsImg.map(item => (
 
@@ -172,33 +131,11 @@ const Home = () => {
       {/* business solution section */}
       <Container>
         <Grid container xs={12} justifyContent='center' alignContent='center' mt={10} mb={10}>
-          <Grid item container xs={12} md={6} justifyContent='center' pr={8} alignItems='flex-start' >
-            <Grid item container direction='column' xs={12} >
-              <Grid item container xs={12} md={6} spacing={3}>
-                <Grid item>
-                  <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
-                </Grid>
-                <Grid item>
-                  <Typography fontSize='2.3rem' color={colors.textColor} fontWeight='bold'>
-                    The best business solution for you
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
-                  </Typography>
-                </Grid>
-                <Grid item container spacing={5} >
-                  <Grid item>
-                    <Typography variant='body1' sx={{ color: colors.deepOrange, cursor: 'pointer' }}>Learn About Our Success</Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography color={colors.deepOrange} sx={{ cursor: 'pointer' }}><ArrowRightAltIcon /></Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
+          <BusinessHintSection
+            heading='The best business solution for you'
+            description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
+            showArrow={true}
+          />
           <Grid item container xs={12} md={6} justifyItems='center' alignItems='center'>
             <Grid item container gap={2} xs={12} md={6} direction='column' pb={3}
 
@@ -207,13 +144,13 @@ const Home = () => {
                 <RunCircleIcon sx={{ padding: '1rem', backgroundColor: '#F1291E', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor}>Scale Your Activity</Typography>
+                <Typography variant='body1' color={theme.colors.textColor}>Scale Your Activity</Typography>
               </Grid>
               <Grid>
-                <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
+                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor2}>
+                <Typography variant='body1' color={theme.colors.textColor2}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
 
                 </Typography>
@@ -226,13 +163,13 @@ const Home = () => {
                 <FormatBoldIcon sx={{ padding: '1rem', backgroundColor: '#36C5AD', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor}>BootCamp</Typography>
+                <Typography variant='body1' color={theme.colors.textColor}>BootCamp</Typography>
               </Grid>
               <Grid>
-                <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
+                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor2}>
+                <Typography variant='body1' color={theme.colors.textColor2}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
 
                 </Typography>
@@ -245,13 +182,13 @@ const Home = () => {
                 <HighQualityIcon sx={{ padding: '1rem', backgroundColor: '#CB4BF8', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor}>Hight Quality</Typography>
+                <Typography variant='body1' color={theme.colors.textColor}>Hight Quality</Typography>
               </Grid>
               <Grid>
-                <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
+                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor2}>
+                <Typography variant='body1' color={theme.colors.textColor2}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
 
                 </Typography>
@@ -264,13 +201,13 @@ const Home = () => {
                 <HomeRepairServiceIcon sx={{ padding: '1rem', backgroundColor: '#56E65B', borderRadius: '50%', color: '#fff', fontSize: '2.5rem', boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor}>Scale Your Activity</Typography>
+                <Typography variant='body1' color={theme.colors.textColor}>Scale Your Activity</Typography>
               </Grid>
               <Grid>
-                <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
+                <Divider sx={{ backgroundColor: theme.colors.deepOrange, width: '4rem', height: '4px' }} />
               </Grid>
               <Grid item>
-                <Typography variant='body1' color={colors.textColor2}>
+                <Typography variant='body1' color={theme.colors.textColor2}>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
 
                 </Typography>
@@ -281,60 +218,27 @@ const Home = () => {
       </Container>
       {/* Best Platform 1*/}
       <SideToSideSection>
-        <Grid
-          xs={12}
-          item
-          container
-          justifyContent='center'
-          alignItems='center'
-          flexWrap='nowrap'
-          direction={{ xs: 'column', md: 'row' }}
-        >
-          <Grid item xs={12} md={8}>
-            <Box
-              component='img'
-              src={chartImage}
-              height='100%'
-              sx={{ width: '100%', height: '100%' }}
-            />
-          </Grid>
-          <Grid item container xs={12} md={6} spacing={3}>
-            <Grid item>
-              <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
-            </Grid>
-            <Grid item>
-              <Typography fontSize='2.3rem' color={colors.textColor} fontWeight='bold'>The best business solution for you
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
-              </Typography>
-            </Grid>
-            <Grid item container spacing={5} >
-              <Grid item>
-                <Typography variant='body1' sx={{ color: colors.deepOrange, cursor: 'pointer' }}>Learn About Our Success</Typography>
-              </Grid>
-              <Grid item>
-                <Typography color={colors.deepOrange} sx={{ cursor: 'pointer' }}><ArrowRightAltIcon /></Typography>
-              </Grid>
-            </Grid>
-          </Grid>
+        <ImgWithTextSection componentsDirectionInMD='row-reverse'>
+          <BusinessHintSection
+            heading='Best Platform for the Technological Era'
+            description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
+            showArrow={true}
+          />
+        </ImgWithTextSection>
 
-        </Grid>
       </SideToSideSection>
       {/* platform overview */}
       <Container>
         <Grid container direction='column' justifyContent='center' alignItems='center' mt={10} mb={10}>
           <Grid container item xs={12} sm={6} spacing={2} justifyContent='center' alignItems='center'>
-            <Grid item xs={12} >
+            <Grid item xs={12} justifyContent='center' alignItems='center'>
               <Typography justifySelf='center' fontSize='1.75rem' lineHeight='24px' color='#8F8F8F'>Advanced Customer Service Platform</Typography>
             </Grid>
-            <Grid item xs={12}>
-              <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={colors.textColor}>Platform Overview</Typography>
+            <Grid item xs={12} justifyContent='center' alignItems='center'>
+              <Typography fontSize='58px' lineHeight='68px' fontWeight='bold' color={theme.colors.textColor}>Platform Overview</Typography>
             </Grid>
-            <Grid item xs={12}>
-              <Typography fontSize='18px' lineHeight='24px' color={colors.textColor2} >
+            <Grid item xs={12} justifyContent='center' alignItems='center'>
+              <Typography fontSize='18px' lineHeight='24px' color={theme.colors.textColor2} >
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
 
               </Typography>
@@ -361,45 +265,13 @@ const Home = () => {
 
       {/* Best Platform 2*/}
       <SideToSideSection>
-        <Grid
-          item
-          container
-          xs={12}
-          justifyContent='center'
-          alignItems='center'
-          flexWrap='nowrap'
-          direction={{ xs: 'column', md: 'row' }}
-        >
-          <Grid item container xs={12} md={6} spacing={3}>
-            <Grid item>
-              <Divider sx={{ backgroundColor: colors.deepOrange, width: '4rem', height: '4px' }} />
-            </Grid>
-            <Grid item>
-              <Typography fontSize='2.3rem' color={colors.textColor} fontWeight='bold'>The best business solution for you
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
-              </Typography>
-            </Grid>
-            <Grid item container spacing={5} >
-              <Grid item>
-                <Typography variant='body1' sx={{ color: colors.deepOrange, cursor: 'pointer' }}>Learn About Our Success</Typography>
-              </Grid>
-              <Grid item>
-                <Typography color={colors.deepOrange} sx={{ cursor: 'pointer' }}><ArrowRightAltIcon /></Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid container item xs={12} >
-            <Box
-              component='img'
-              src={chartImage}
-              sx={{ width: '100%', height: '100%' }}
-            />
-          </Grid>
-        </Grid>
+        <ImgWithTextSection >
+          <BusinessHintSection
+            heading='Best Platform for the Technological Era'
+            description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
+            showArrow={false}
+          />
+        </ImgWithTextSection>
       </SideToSideSection>
 
       {/* Acceleration section */}
@@ -410,12 +282,12 @@ const Home = () => {
         >
           <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>
             <Grid item>
-              <Typography fontSize='2rem' fontWeight='bold' color={colors.textColor}>
+              <Typography fontSize='2rem' fontWeight='bold' color={theme.colors.textColor}>
                 Grow Your Business and Join Our Happy Users
               </Typography>
             </Grid>
             <Grid item>
-              <Typography color={colors.textColor2}>
+              <Typography color={theme.colors.textColor2}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
 
               </Typography>
@@ -426,21 +298,17 @@ const Home = () => {
 
           </Grid>
           <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>
-            <Grid item>
-              <Typography fontSize='2rem' fontWeight='bold' color={colors.textColor}>
+            <Grid item container>
+              <Typography fontSize='2rem' fontWeight='bold' color={theme.colors.textColor}>
                 Grow Your Business and Join Our Happy Users
               </Typography>
             </Grid>
-            <Grid item>
-              <Typography color={colors.textColor2}>
+            <Grid item container>
+              <Typography color={theme.colors.textColor2}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet
 
               </Typography>
             </Grid>
-            <Grid item>
-              <ButtonComponent bgColor='linear-gradient(90deg, #e66465, #9198e5)' content='About us' textColor='#fff' />
-            </Grid>
-
           </Grid>
         </Grid>
       </Container>
@@ -449,7 +317,7 @@ const Home = () => {
       <Container>
         <Grid container justifyContent='center' alignItems='center' mt={10} mb={10}>
           <Grid item xs={12} sm={8} md={3.5} >
-            <Typography fontSize='2.3rem' fontWeight='bold' color={colors.textColor}>
+            <Typography fontSize='2.3rem' fontWeight='bold' color={theme.colors.textColor}>
               Don't Just Take our Word for it!
             </Typography>
           </Grid>
@@ -465,7 +333,7 @@ const Home = () => {
                 <CountUp end={570} enableScrollSpy='true' style={{ fontSize: '2.8rem', fontWeight: 'bold', color: '#FF6057' }} />
               </Grid>
               <Grid item >
-                <Typography fontSize='1.5rem' color={colors.textColor2}>{item}</Typography>
+                <Typography fontSize='1.5rem' color={theme.colors.textColor2}>{item}</Typography>
               </Grid>
             </Grid>
           ))}
@@ -480,44 +348,17 @@ const Home = () => {
         >
           <Grid container item xs={12} md={5} justifyContent='center' alignItems='center'>
             <Carousel sx={{ width: '100%' }}>
-              {
-                ourClients.map((item) =>
-                (<Paper key={item.id} sx={{ boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} p={0}>
-                  <Grid container p={1} direction={{ xs: 'column', md: 'row' }} justifyContent='center' alignItems='center'>
-                    <Grid item xs={5} gap={2}>
-                      <Box component='img' src={item.img} />
-                    </Grid>
-                    <Grid xs={5} gap={1.5} item container direction='column'>
-                      <Grid item>
-                        <Typography fontSize='24px' color={colors.textColor}>
-                          {item.name}
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Typography fontSize='14px' color={colors.textColor2}>
-                          {item.dis}
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <Rating
-                          color='#CB48F9'
-                          value={item.rating}
-                        />
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Paper>))
-              }
+              {testimonials.map((item) => (<TestimonialCard item={item} />))}
             </Carousel>
           </Grid>
           <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>
             <Grid item>
-              <Typography fontSize='2rem' fontWeight='bold' color={colors.textColor}>
+              <Typography fontSize='2rem' fontWeight='bold' color={theme.colors.textColor}>
                 Grow Your Business and Join Our Happy Users
               </Typography>
             </Grid>
             <Grid item>
-              <Typography color={colors.textColor2}>
+              <Typography color={theme.colors.textColor2}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 
               </Typography>

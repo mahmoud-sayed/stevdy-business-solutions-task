@@ -36,3 +36,27 @@ Shoes-Shop is a mobile app built with react native I just learn it in the last 2
  - make the design better and more responsive
  - create the missing things
 
+
+## Changes I have made to the project
+
+&nbsp;
+
+  -  create component for this part so I can use It without reWrite the code
+  ![BusinessHintSection](./ReadMEImages/BusinessHintSection.png)
+
+&nbsp;
+
+  - create new theme and add it to the MUI theming so I can use it all around the project if needed [Click Here](https://mui.com/material-ui/customization/theming/) so you can review the step on Docs
+
+&nbsp;
+
+ - created data file to hold the data
+
+ &nbsp;
+
+ - create component for testimonials
+  ![testimonials](./ReadMEImages/testmoinals.png)
+
+ &nbsp;
+
+ - 
