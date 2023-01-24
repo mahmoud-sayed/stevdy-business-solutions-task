@@ -93,3 +93,11 @@ Shoes-Shop is a mobile app built with react native I just learn it in the last 2
 
 - created component for counter 
  ![counter component](./ReadMEImages/counter.png)
+
+&nbsp;
+
+- added all the background images for all the page
+
+&nbsp;
+
+- fixed some bugs
