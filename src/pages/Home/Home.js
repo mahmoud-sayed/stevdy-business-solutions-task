@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Divider } from '@mui/material';
+import { Box, Container, Typography, Grid, Divider, useTheme } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
 
@@ -26,16 +26,12 @@ import Footer from '../../components/Footer/Footer';
 import NavBar from './../../components/NavBar/NavBar';
 
 //page style
-import { useTheme } from '@emotion/react';
 import testimonials from './../../data/testimonials';
 import TestimonialCard from '../../components/TestimonialCard/TestimonialCard';
 import BusinessHintSection from '../../components/BusinessHintSection/BusinessHintSection';
 import ImgWithTextSection from './../../components/ImgWithTextSection/ImgWithTextSection';
 import ServiceComponent from '../../components/ServiceComponent/ServiceComponent';
 import Counter from '../../components/Counter/Counter';
-
-// data to use
-
 
 const Home = () => {
   const theme = useTheme();
@@ -73,7 +69,8 @@ const Home = () => {
 
 
   return (
-    <Box >
+    <Box sx={{ overflow: 'hidden' }}>
+      {/* Hero background Image */}
       <Box
         component='img'
         src={backGroundHeaderImage}
@@ -81,13 +78,12 @@ const Home = () => {
           backgroundSize: 'cover',
           objectFit: 'contain',
           width: '100%',
-          maxWidth: '100%',
+          maxWidth: { sm: '150%' },
           position: 'absolute',
-          top: -76,
+          top: { lg: -10, xl: -300 },
           left: 0,
           zIndex: -1,
-          display: { xs: 'none', sm: 'initial' }
-
+          display: { xs: 'none', md: 'initial' },
         }}
       />
 
@@ -99,29 +95,29 @@ const Home = () => {
       {/* header content section */}
       <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyItems='center' alignItems='center' >
-          <ImgWithTextSection>
+          <ImgWithTextSection displayImg='none'>
             <Grid item container xs={12} md={4} gap={{ xs: 1.5, md: 4 }} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
               <Grid item xs={12}>
                 <Typography
                   justifySelf='center'
                   fontSize={{ xs: '16px', md: '18px', lg: '20px', xl: '24px' }}
                   lineHeight='24px'
-                  color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>
+                  color={{ xs: theme.colors.deepOrange, md: theme.colors.white }}>
                   Advanced Platform
                 </Typography>
               </Grid>
               <Grid item xs={12}>
                 <Typography
                   fontSize={{ xs: '30px', md: '40', lg: '58px' }}
-                  lineHeight={{ xs: '40px', lg: '68px' }} fontWeight='bold' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}
+                  lineHeight={{ xs: '40px', lg: '68px' }} fontWeight='bold' color={{ xs: theme.colors.deepOrange, md: theme.colors.white }}
                 >Take your team to the next level</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography fontSize={{ xs: '14px', lg: '18px' }} lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                <Typography fontSize={{ xs: '14px', lg: '18px' }} lineHeight='24px' color={{ xs: theme.colors.deepOrange, md: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <ButtonComponent bgColor={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} content='About us' textColor={{ xs: theme.colors.white, sm: theme.colors.deepOrange }} width={{ xs: '120px', md: '178px' }} />
+                <ButtonComponent bgColor={{ xs: theme.colors.deepOrange, md: theme.colors.white }} content='About us' textColor={{ xs: theme.colors.white, md: theme.colors.deepOrange }} width={{ xs: '120px', md: '178px' }} />
               </Grid>
             </Grid>
           </ImgWithTextSection>
@@ -168,7 +164,7 @@ const Home = () => {
 
       {/* Best Platform */}
       < SideToSideSection >
-        <ImgWithTextSection componentsDirectionInMD='row-reverse'>
+        <ImgWithTextSection componentsDirectionInMD='row-reverse' backgroundImage={{ md: 650, lg: 750 }}>
           <BusinessHintSection
             heading='Best Platform for the Technological Era'
             description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
