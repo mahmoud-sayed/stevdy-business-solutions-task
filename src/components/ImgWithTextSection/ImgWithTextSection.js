@@ -4,7 +4,7 @@ import chartImage from './../../assets/pageContentImages/Chart.png';
 
 const ImgWithTextSection = ({ children, componentsDirectionInMD = 'row' }) => {
   return (
-    <Grid container justifyItems='center' alignItems='center'>
+    <Grid container justifyItems='center' alignItems='center' mt={{ xs: 2, sm: 4, md: 10 }} mb={{ xs: 2, sm: 4, md: 10 }}>
       <Grid
         xs={12}
         item

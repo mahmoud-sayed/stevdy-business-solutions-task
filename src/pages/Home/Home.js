@@ -100,11 +100,11 @@ const Home = () => {
       <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyItems='center' alignItems='center' >
           <ImgWithTextSection>
-            <Grid container item xs={12} md={4} spacing={{ xs: 1.5, md: 3 }} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
+            <Grid item container xs={12} md={4} gap={{ xs: 1.5, md: 4 }} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
               <Grid item xs={12}>
                 <Typography
                   justifySelf='center'
-                  fontSize={{ xs: '16px', md: '18', lg: '20', xl: '24px' }}
+                  fontSize={{ xs: '16px', md: '18px', lg: '20px', xl: '24px' }}
                   lineHeight='24px'
                   color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>
                   Advanced Platform
@@ -112,11 +112,12 @@ const Home = () => {
               </Grid>
               <Grid item xs={12}>
                 <Typography
-                  fontSize={{ xs: '30px', lg: '40', xl: '58px' }}
-                  lineHeight={{ xs: '40px', xl: '68px' }} fontWeight='bold' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}>Take your team to the next level</Typography>
+                  fontSize={{ xs: '30px', md: '40', lg: '58px' }}
+                  lineHeight={{ xs: '40px', lg: '68px' }} fontWeight='bold' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }}
+                >Take your team to the next level</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography fontSize={{ xs: '14px', lg: '18' }} lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                <Typography fontSize={{ xs: '14px', lg: '18px' }} lineHeight='24px' color={{ xs: theme.colors.deepOrange, sm: theme.colors.white }} >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -142,13 +143,13 @@ const Home = () => {
 
       {/* business solution section */}
       < Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
-        <Grid container xs={12} gap={{ xs: 5 }} justifyContent='center' alignContent='center' mt={10} mb={10}>
+        <Grid container xs={12} gap={{ xs: 5, md: 0 }} justifyContent='center' alignContent='center' mt={10} mb={10}>
           <BusinessHintSection
             heading='The best business solution for you'
             description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
             showArrow={true}
           />
-          <Grid item container xs={12} md={6} justifyContent='center' gap={1} alignItems='center'>
+          <Grid item container xs={12} md={6} justifyContent='center' gap={{ sm: 1, md: 0 }} alignItems='center'>
             <ServiceComponent heading='Scale Your Activity'>
               <RunCircleIcon sx={{ padding: { xs: '.5rem', md: '1rem' }, backgroundColor: '#F1291E', borderRadius: '50%', color: '#fff', fontSize: { xs: '1.5rem', md: '2rem', lg: '2.5rem' }, boxShadow: '3px 3px 1rem #c2c2c2, -3px -3px 1rem #c2c2c2' }} />
             </ServiceComponent>
@@ -246,14 +247,14 @@ const Home = () => {
 
           </Grid>
           <Grid container item gap={1} xs={12} md={5} justifyContent='flex-start' alignItems='center' direction='row'>
-            <Grid item container mr={{ sm: -7, md: 'initial' }} xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={{ xs: 8, sm: 6, md: 6, lg: 8 }} width='30px'>
+            <Grid item container mr={{ sm: -7, md: 'initial' }} xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={{ xs: 8, sm: 6, md: 8 }} width='30px'>
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <Typography sx={{ color: '#fff', fontSize: { xs: '1rem', lg: '1.5rem' }, fontWeight: 'bold' }}> 1</Typography>
                 </Box>
               </Grid>
               <Grid>
-                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', sm: '70px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', sm: '70px', md: '90px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
               </Grid>
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -261,7 +262,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid>
-                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', sm: '70px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
+                <Divider orientation="vertical" variant="middle" flexItem sx={{ height: { xs: '65px', sm: '70px', md: '90px', lg: '80px' }, width: '2px', backgroundColor: '#BCBCBC' }} />
               </Grid>
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
