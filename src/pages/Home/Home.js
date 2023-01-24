@@ -329,7 +329,7 @@ const Home = () => {
       <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container xs={12} justifyContent='center' alignItems='center' mt={10} mb={5}>
           {['Download', 'Active User', 'Positive Feedback', '+ rating'].map(item => (
-            <Counter item={item} />
+            <React.Fragment key={item}><Counter item={item} /></React.Fragment>
           ))}
         </Grid>
       </Container>;
@@ -342,7 +342,7 @@ const Home = () => {
         >
           <Grid container item xs={12} md={5} mb={{ xs: 5, md: 'initial' }} justifyContent='center' alignItems='center'>
             <Carousel sx={{ width: '100%' }}>
-              {testimonials.map((item) => (<TestimonialCard item={item} />))}
+              {testimonials.map((item) => (<React.Fragment key={item}><TestimonialCard item={item} /></React.Fragment>))}
             </Carousel>
           </Grid>
           <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>

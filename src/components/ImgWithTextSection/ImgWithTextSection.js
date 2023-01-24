@@ -21,6 +21,7 @@ const ImgWithTextSection = ({ children, componentsDirectionInMD = 'row' }) => {
             src={chartImage}
             height='100%'
             sx={{ width: '100%', height: '100%' }}
+
           />
         </Grid>
       </Grid>

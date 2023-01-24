@@ -6,7 +6,7 @@ const Counter = ({ item }) => {
   const theme = useTheme();
 
   return (
-    <Grid item container justifyContent='center' sx={6} sm={4} md={6} lg={3} alignItems='center' direction='column' gap={1}>
+    <Grid item container justifyContent='center' xs={6} sm={4} md={6} lg={3} alignItems='center' direction='column' gap={1}>
       <Grid item >
         <CountUp end={570} enableScrollSpy='true' style={{ fontSize: '2.8rem', fontWeight: 'bold', color: '#FF6057' }} />
       </Grid>
