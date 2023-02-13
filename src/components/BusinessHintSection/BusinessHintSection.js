@@ -10,7 +10,7 @@ import { useTheme } from '@emotion/react';
 const BusinessHintSection = ({ heading, description, showArrow }) => {
   const theme = useTheme();
   return (
-    <Grid item container xs={12} md={6} justifyContent='center' pr={{ xs: 0, lg: 8 }} alignItems='flex-start' >
+    <Grid item container xs={12} md={6} justifyContent='center' pl={{ xs: 0, sm: 10, md: 5, lg: 10 }} pr={{ xs: 0, sm: 10, md: 5, lg: 10 }} alignItems='flex-start' >
       <Grid item container direction='column' xs={12} >
         <Grid item container direction='column' xs={12} md={6} gap={3}>
           <Grid item>

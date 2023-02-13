@@ -243,7 +243,11 @@ const Home = () => {
           direction={{ xs: 'column', md: 'row' }}
           gap={{ xs: 5, md: 2 }}
         >
-          <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>
+          <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'
+            pl={{ xs: 0, sm: 3, xl: 6 }}
+            pr={{ xs: 0, sm: 3, xl: 6 }}
+          >
+
             <Grid item>
               <Typography fontSize={{ xs: '1.5rem', lg: '2rem' }} fontWeight='bold' color={theme.colors.textColor}>
                 Grow Your Business and Join Our Happy Users
@@ -261,7 +265,9 @@ const Home = () => {
 
           </Grid>
           <Grid container item gap={1} xs={12} md={5} justifyContent='flex-start' alignItems='center' direction='row'>
-            <Grid item container mr={{ sm: -7, md: 'initial' }} xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={{ xs: 8, sm: 6, md: 8 }} width='30px'>
+            <Grid item container mr={{ sm: -7, md: 'initial' }} xs={3} justifyContent='flex-start' direction='column' alignItems='center' gap={1} pb={{ xs: 8, sm: 6, md: 8 }} width='30px'
+
+            >
               <Grid item>
                 <Box sx={{ padding: { xs: '0.5rem', lg: '1rem' }, backgroundColor: theme.colors.deepOrange, borderRadius: '50%', width: '1rem', height: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <Typography sx={{ color: '#fff', fontSize: { xs: '1rem', lg: '1.5rem' }, fontWeight: 'bold' }}> 1</Typography>
@@ -365,7 +371,10 @@ const Home = () => {
               {testimonials.map((item) => (<React.Fragment key={item}><TestimonialCard item={item} /></React.Fragment>))}
             </Carousel>
           </Grid>
-          <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'>
+          <Grid container item gap={2} xs={12} md={5} justifyContent='flex-start' alignItems='center'
+            pl={{ xs: 5, xl: 6 }}
+            pr={{ xs: 5, xl: 6 }}
+          >
             <Grid item>
               <Typography fontSize={{ xs: '1.5rem', lg: '2rem' }} fontWeight='bold' color={theme.colors.textColor}>
                 Grow Your Business and Join Our Happy Users
