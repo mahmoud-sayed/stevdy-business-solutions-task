@@ -44,7 +44,7 @@ const NavBar = () => {
                 />
               </Grid>
             </Grid>
-            <Grid item container spacing={4} direction='row' justifyContent='center' alignItems='center' justifySelf='flex-start' sx={{ marginLeft: { md: -20 } }}>
+            <Grid item container spacing={4} direction='row' justifyContent='center' alignItems='center' justifySelf='flex-start' sx={{ marginLeft: { md: -30 } }}>
               {['Browser', 'Bootcamps', 'How It Works', 'Testemonia'].map((text => (
 
                 <Grid item key={text}>

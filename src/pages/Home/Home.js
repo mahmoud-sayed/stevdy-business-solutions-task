@@ -190,7 +190,18 @@ const Home = () => {
             </Grid>
           </Grid>
           <Grid container item xs={12} >
-            <Carousel sx={{ width: '100%' }}>
+            <Carousel sx={{ width: '100%' }}
+              indicatorContainerProps={{
+                style: {
+                  marginTop: '-20px'
+                },
+              }}
+              activeIndicatorIconButtonProps={{
+                style: {
+                  color: theme.colors.deepOrange
+                },
+              }}
+            >
               {
                 chartItems.map((item, i) =>
                 (<Box p={0} key={i}>
@@ -337,7 +348,13 @@ const Home = () => {
           gap={2}
         >
           <Grid container item xs={12} md={5} mb={{ xs: 5, md: 'initial' }} justifyContent='center' alignItems='center'>
-            <Carousel sx={{ width: '100%' }}>
+            <Carousel sx={{ width: '100%' }}
+              activeIndicatorIconButtonProps={{
+                style: {
+                  color: theme.colors.deepOrange
+                },
+              }}
+            >
               {testimonials.map((item) => (<React.Fragment key={item}><TestimonialCard item={item} /></React.Fragment>))}
             </Carousel>
           </Grid>
