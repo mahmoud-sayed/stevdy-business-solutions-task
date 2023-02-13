@@ -11,6 +11,7 @@ import client3 from './../../assets/header/Clients/client-3.png';
 import client4 from './../../assets/header/Clients/client-4.png';
 import client5 from './../../assets/header/Clients/client-5.png';
 import chartImage from './../../assets/pageContentImages/Chart.png';
+import chartImageCroped from './../../assets/pageContentImages/Croped-Chart.png';
 
 
 // icons
@@ -80,7 +81,9 @@ const Home = () => {
           width: '100%',
           maxWidth: { sm: '150%' },
           position: 'absolute',
-          top: { lg: -10, xl: -300 },
+          top: {
+            lg: -10, xl1: -100, xl2: -100, xl3: -150, xl4: -200, xl5: -250, xl6: -300, xl7: -350, xl8: -400
+          },
           left: 0,
           zIndex: -1,
           display: { xs: 'none', md: 'initial' },
@@ -95,7 +98,7 @@ const Home = () => {
       {/* header content section */}
       <Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyItems='center' alignItems='center' >
-          <ImgWithTextSection displayImg='none'>
+          <ImgWithTextSection displayImg='none' IMG={chartImage}>
             <Grid item container xs={12} md={4} gap={{ xs: 1.5, md: 4 }} justifyContent='center' alignItems='center' pt={{ xs: 3, md: 0 }}>
               <Grid item xs={12}>
                 <Typography
@@ -164,7 +167,11 @@ const Home = () => {
 
       {/* Best Platform */}
       < SideToSideSection >
-        <ImgWithTextSection componentsDirectionInMD='row-reverse' backgroundImage={{ md: 650, lg: 750 }}>
+        <ImgWithTextSection
+          componentsDirectionInMD='row-reverse'
+          backgroundImage={{ md: 650, lg: 750 }}
+          IMG={chartImageCroped}
+        >
           <BusinessHintSection
             heading='Best Platform for the Technological Era'
             description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
@@ -221,7 +228,7 @@ const Home = () => {
 
       {/* Best Platform 2*/}
       <SideToSideSection SideToSideSection >
-        <ImgWithTextSection >
+        <ImgWithTextSection IMG={chartImage}>
           <BusinessHintSection
             heading='Best Platform for the Technological Era'
             description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'
@@ -325,7 +332,7 @@ const Home = () => {
       <Container Container sx={{ maxWidth: { xl: 'xl', lg: 'lg' } }}>
         <Grid container justifyContent='center' alignItems='center' mt={{ xs: 0, lg: 10 }} mb={{ xs: 0, lg: 10 }}>
           <Grid item xs={12} sm={8} md={3.5} >
-            <Typography fontSize={{ xs: '1.5rem', md: '2rem', lg: '2.3rem' }} fontWeight='bold' color={theme.colors.textColor}>
+            <Typography align="center" fontSize={{ xs: '1.5rem', md: '2rem', lg: '2.3rem' }} fontWeight='bold' color={theme.colors.textColor}>
               Don't Just Take our Word for it!
             </Typography>
           </Grid>
