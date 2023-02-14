@@ -101,3 +101,23 @@ Shoes-Shop is a mobile app built with react native I just learn it in the last 2
 &nbsp;
 
 - fixed some bugs
+
+&nbsp;
+
+-	Done centering text that is mentioned in point number 5.
+
+&nbsp;
+
+- Done changing the color of the dot that is mentioned in point number 4.
+
+&nbsp;
+
+- Done modifying the photo not show the same as that mentioned in point number 3 design but I have done that by editing the photo in photoshop.
+
+&nbsp;
+
+- Done adding all padding needed for all sections mentioned in point number 2 (if there is something missing I would like to know)
+
+&nbsp;
+
+- Done showing the hidden text starting from 1536px that is mentioned in point number 1.
